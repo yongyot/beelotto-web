@@ -9,7 +9,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/web/lotto/{lang}', [LottoPageController::class, 'index']);
+Route::get('/web/games/{lang}', [LottoPageController::class, 'index']);
 Route::get('/news', [LottoController::class, 'fetchNews']);
 
 Route::get('/privacy-policy', function () {

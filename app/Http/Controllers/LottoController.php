@@ -99,16 +99,16 @@ class LottoController extends Controller
           return response()->json([
                 'result' => true,
                 'message' => 'ดึงข้อมูลสำเร็จ',
-                'app_name_th' => 'HuayBee',
-                'app_name_en' => 'HuayBee',
-                'app_name_zh' => '好运蜂',
-                'app_theme_color_hex' => '0xFFeeb50e',
-                'app_theme_color' => '#eeb50e',
-                'app_theme_color_rgb' => 'RGB(238, 181, 14)',
-                'home_webview_url_th' => 'https://bee-lotto.com/web/lotto/th',
-                'home_webview_url_en' => 'https://bee-lotto.com/web/lotto/en',
-                'home_webview_url_zh' => 'https://bee-lotto.com/web/lotto/zh',
-                'app_share_url' => 'https://bee-lotto.com',
+                'app_name_th' => 'PG Slot Lucky',
+                'app_name_en' => 'PG Slot Lucky',
+                'app_name_zh' => 'PG老虎机趣味语言',
+                'app_theme_color_hex' => '0d131c',
+                'app_theme_color' => '#0d131c',
+                'app_theme_color_rgb' => 'RGB(13,19,28)',
+                'home_webview_url_th' => 'https://www.gamedemo.fun/web/games/th',
+                'home_webview_url_en' => 'https://www.gamedemo.fun/web/games/en',
+                'home_webview_url_zh' => 'https://www.gamedemo.fun/web/games/zh',
+                'app_share_url' => 'https://www.gamedemo.fun',
             ]);
    }
    public function fetchNews()
