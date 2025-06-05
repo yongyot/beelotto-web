@@ -1,19 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="owl-carousel">
+
+
+<div class="owl-carousel" style="display: none;">
     <div class="item">
-        <img src="https://api.glo.or.th/utility/get/image/662d68e7-37f0-4b20-be58-7770ad878c97" alt="Slide 1">
+        <img src="https://api.glo.or.th/utility/get/image/3d2503b7-3bfc-4883-95c2-1743d888bfa4" alt="Slide 1">
     </div>
     <div class="item">
-        <img src="https://api.glo.or.th/utility/get/image/77652df7-f080-40a7-a5fa-d1b859c33953" alt="Slide 2">
+        <img src="https://api.glo.or.th/utility/get/image/c90b327d-602f-4e96-8bf1-c69544002df6" alt="Slide 2">
     </div>
 </div>
 
 
 
 
-<div class="header">
+<div class="header" style="display: none;">
     <div class="header-content">
     
         <div class="search-box">
@@ -33,24 +35,26 @@
 
 <div id="searchResult" class="search-result"></div>
 
-
-
+<br>
+<div class="container">
+<h2 style="font-size: 8px;">HuayBee เป็นแอปที่ให้ข้อมูลผลล็อตเตอรี่ ข้อมูลทั้งหมดนำมาจากแหล่งข้อมูลสาธารณะ แอปนี้ไม่ได้เป็นแอปทางการของสำนักงานสลากกินแบ่งรัฐบาล<h2>
+</div>    
 <div class="lotto-container">
     <h2 class="lotto-header">{{ __('messages.lottery_results') }}</h2>
-    <p class="lotto-date">{{ __('messages.draw_date') }}: 1 {{ __('messages.march') }} 2568</p>
+    <p class="lotto-date">{{ __('messages.draw_date') }}: 16 เมษายน 2568</p>
 
     <!-- รางวัลที่ 1 และ เลขท้าย 2 ตัวในแถวเดียวกัน -->
     <div class="lotto-top-row">
         <div class="prize-box main-prize">
             <h3 class="prize-title">{{ __('messages.first_prize') }}</h3>
-            <p class="prize-amount">{{ __('messages.prize_value', ['amount' => '6,000,000']) }}</p>
-            <p class="prize-number main">818894</p>
+
+            <p class="prize-number main">266227</p>
         </div>
 
         <div class="prize-box two-digit-prize">
             <h3 class="prize-title">{{ __('messages.two_digit') }}</h3>
-            <p class="prize-amount">{{ __('messages.prize_value', ['amount' => '2,000']) }}</p>
-            <p class="prize-number two-digit">54</p>
+       
+            <p class="prize-number two-digit">85</p>
         </div>
     </div>
 
@@ -58,24 +62,24 @@
     <div class="three-digit-grid">
         <div class="prize-box">
             <h3 class="prize-title">{{ __('messages.three_digit_front') }}</h3>
-            <p class="prize-amount">{{ __('messages.prize_value', ['amount' => '4,000']) }}</p>
+   
             <div class="prize-grid">
-                <span>139</span>
-                <span>530</span>
+                <span>413</span>
+                <span>254</span>
             </div>
         </div>
         <div class="prize-box">
             <h3 class="prize-title">{{ __('messages.three_digit_back') }}</h3>
-            <p class="prize-amount">{{ __('messages.prize_value', ['amount' => '4,000']) }}</p>
+          
             <div class="prize-grid">
-                <span>656</span>
-                <span>781</span>
+                <span>760</span>
+                <span>474</span>
             </div>
         </div>
     </div>
   <p style="
     font-size: 10px;
-">ข้อมูลจาก สำนักงานสลากกินแบ่งฯ</p>  
+">ข้อมูลผลสลากกินแบ่งรัฐบาลนำมาจากสำนักงานสลากกินแบ่งรัฐบาล (www.glo.or.th)</p>  
 </div>
 
 
@@ -144,9 +148,9 @@
 
              <!-- 🎥 วิดีโอถ่ายทอดสดการออกรางวัล -->
         <div class="video-section">
-            <h2>🎥 การออกรางวัลสลากกินแบ่งรัฐบาล</h2>
+            <h2>🎥 การออกรางวัลสลากกินแบ่งรัฐบาล (www.glo.or.th)</h2>
             <iframe width="100%" height="400" 
-                src="https://www.youtube.com/embed/GBnTpYlkNuE" 
+                src="https://www.youtube.com/embed/jAOBFUI-lt4?si=wPK8cAyz09Nf97XE" 
                 frameborder="0" 
                 allowfullscreen>
             </iframe>
@@ -157,46 +161,47 @@
     <h2>🎉 ข่าวคนดวงเฮง ถูกรางวัลลอตเตอรี่ 🎉</h2>
     
     <div class="news-grid">
-        <div class="news-item">
-            <a href="https://www.thairath.co.th/lottery/news/2844751" target="_blank">
-                <img src="https://static.thairath.co.th/media/00_A5B2844751C2E480.webp" alt="หนุ่มขับรถขยะ ถูกหวย 12 ล้าน">
-                <h3>หนุ่มขับรถขยะ ถูกหวย 12 ล้าน หลังความฝันให้โชค</h3>
-                <span>02 มี.ค. 2568 11:00 น.</span>
-            </a>
-        </div>
-
-        <div class="news-item">
-            <a href="https://www.thairath.co.th/lottery/news/2844734" target="_blank">
-                <img src="https://static.thairath.co.th/media/00_A5B2844734C2E480.webp" alt="ป้าน้อย ถูกหวย 30 ล้าน">
-                <h3>ป้าน้อย ขายแคบหมูดวงปัง ถูกรางวัลที่ 1 รับ 30 ล้าน</h3>
-                <span>02 มี.ค. 2568 07:52 น.</span>
-            </a>
-        </div>
-
-        <div class="news-item">
-            <a href="https://www.thairath.co.th/lottery/news/2844698" target="_blank">
-                <img src="https://static.thairath.co.th/media/00_A5B2844698C2E480.webp" alt="คนถูกรางวัลที่ 1 รับ 150 ล้าน">
-                <h3>วาสนาแรง คนถูกรางวัลที่ 1 รับเงิน 150 ล้านบาท</h3>
-                <span>01 มี.ค. 2568 16:47 น.</span>
-            </a>
-        </div>
-
-        <div class="news-item">
-            <a href="https://www.thairath.co.th/lottery/news/2844694" target="_blank">
-                <img src="https://static.thairath.co.th/media/00_A5B2844694C1E480.webp" alt="สลากดิจิทัล รับ 162 ล้าน">
-                <h3>ถูกรางวัลที่ 1 สลากดิจิทัล รวม 162 ล้าน</h3>
-                <span>01 มี.ค. 2568 16:31 น.</span>
-            </a>
-        </div>
-
-        <div class="news-item">
-            <a href="https://www.thairath.co.th/lottery/latest-result/2844689" target="_blank">
-                <img src="https://static.thairath.co.th/media/00_A5B2844689C1E480.webp" alt="ผลสลาก N3 งวด 1 มีนาคม 2568">
-                <h3>ผลสลาก N3 งวด 1 มีนาคม 2568 ออกแล้ว</h3>
-                <span>01 มี.ค. 2568 16:09 น.</span>
-            </a>
-        </div>
+    <div class="news-item">
+        <a href="https://www.thairath.co.th/news/local/2842231" target="_blank">
+            <img src="https://static.thairath.co.th/media/00_A5B2842231C2E480.webp" alt="หนุ่มอุทัยฯ สุดเฮง">
+            <h3>หนุ่มอุทัยฯ สุดเฮง ซื้อลอตเตอรี่ระหว่างรอหน้าธนาคาร ได้รับทรัพย์เต็ม ๆ 12 ล้าน</h3>
+            <span>16 ก.พ. 2568 20:12 น.</span>
+        </a>
     </div>
+
+    <div class="news-item">
+        <a href="https://www.thairath.co.th/lottery/news/2839528" target="_blank">
+            <img src="https://static.thairath.co.th/media/00_A5B2839528C1E480.webp" alt="แม่ค้าถูกหวย 12 ล้าน">
+            <h3>แม่ค้าถูกหวย 12 ล้าน ซื้อเลข "00" จากทะเบียนรถ แต่ใบที่ถูกได้แถมมา</h3>
+            <span>01 ก.พ. 2568 21:30 น.</span>
+        </a>
+    </div>
+
+    <div class="news-item">
+        <a href="https://www.thairath.co.th/news/local/northeast/2808512" target="_blank">
+            <img src="https://static.thairath.co.th/media/00_A5B2808512C1E480.webp" alt="ป้านิด แม่บ้านรีสอร์ต">
+            <h3>ป้านิด แม่บ้านรีสอร์ตปากช่อง คนดวงดีถูกรางวัลที่ 1 รับ 6 ล้าน</h3>
+            <span>16 ส.ค. 2567 21:15 น.</span>
+        </a>
+    </div>
+
+    <div class="news-item">
+        <a href="https://www.thairath.co.th/news/local/north/2808471" target="_blank">
+            <img src="https://static.thairath.co.th/media/00_A5B2808471C1E480.webp" alt="รถพระยางแตก">
+            <h3>รถพระยางแตก ทำเฮทั้งหมู่บ้าน ทะเบียน 3 ตัวมาเต็มๆ</h3>
+            <span>16 ส.ค. 2567 18:00 น.</span>
+        </a>
+    </div>
+
+    <div class="news-item">
+        <a href="https://www.thairath.co.th/news/local/central/2805106" target="_blank">
+            <img src="https://static.thairath.co.th/media/00_A5B2805106C2E480.webp" alt="เลขไม่ตรงใจ ทำชีวิตพลิก">
+            <h3>เลขไม่ตรงใจ ทำชีวิตพลิก สาวร้อยเอ็ดดวงเฮง ซื้อหวยกลางกรุง ถูกรางวัลที่ 1</h3>
+            <span>02 ส.ค. 2567 18:22 น.</span>
+        </a>
+    </div>
+</div>
+
 </div>
 
 
@@ -282,24 +287,29 @@
     
 
     <script>
-        function checkLotto() {
-            let inputNumber = document.getElementById('searchNumber').value.trim();
-            let resultBox = document.getElementById('searchResult');
-            let found = false;
+function checkLotto() {
+    let inputNumber = document.getElementById('searchNumber').value.trim();
+    let resultBox = document.getElementById('searchResult');
+    let found = false;
 
-            document.querySelectorAll('.lotto-number').forEach(element => {
-                let prizeNumbers = element.innerText.split(', ').map(num => num.trim());
-                if (prizeNumbers.includes(inputNumber)) {
-                    let prizeType = element.closest('.lotto-box').querySelector('h3').innerText;
-                    resultBox.innerHTML = `<p class="success">🎉 ${inputNumber} {{ __('messages.win') }} ${prizeType}!</p>`;
-                    found = true;
-                }
-            });
+    // ตรวจสอบว่าตัวแปร messages ถูกกำหนดค่าไว้แล้วหรือไม่
+    let winMessage = (typeof messages !== "undefined" && messages.win) ? messages.win : "คุณถูกรางวัล!";
+    let notWinMessage = (typeof messages !== "undefined" && messages.not_win) ? messages.not_win : "เสียใจด้วย คุณไม่ถูกรางวัล";
 
-            if (!found) {
-                resultBox.innerHTML = `<p class="error">❌ {{ __('messages.not_win') }}</p>`;
-            }
+    document.querySelectorAll('.lotto-number').forEach(element => {
+        let prizeNumbers = element.innerText.split(/\s*,\s*/);
+        if (prizeNumbers.includes(inputNumber)) {
+            let prizeType = element.closest('.lotto-box').querySelector('h3').innerText;
+            resultBox.innerHTML = `<p class="success">🎉 ${inputNumber} ${winMessage} ${prizeType}!</p>`;
+            found = true;
         }
+    });
+
+    if (!found) {
+        resultBox.innerHTML = `<p class="error">❌ ${notWinMessage}</p>`;
+    }
+}
+
 
         function toggleExtraPrizes() {
             let extraPrizes = document.getElementById('extraPrizes');
